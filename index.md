@@ -1,6 +1,6 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
-carpentry: "sw"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
+carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
 venue: "Federal Reserve Board"        # brief name of host site without address (e.g., "Euphoric State University")
 address: "1709 New York Avenue NW, Washington, DC 20006"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
