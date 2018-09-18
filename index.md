@@ -7,7 +7,7 @@ country: "us"      # lowercase two-letter ISO country code such as "fr" (see htt
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "38.896676, -77.040454"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
 humandate: "September 27-28, 2018"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "8:30-4:30"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+humantime: "9:00-5:00"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2018-09-27      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2018-09-28        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Jennifer Gilbert", "Tony Primerano", "Brian Seok", "Damian Thomas"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
@@ -115,10 +115,8 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
+  <strong>Requirements:</strong> PCs with the required software will be provided. Students are required to abide by
+
   {% if page.carpentry == "swc" %}
   Software Carpentry's
   {% elsif page.carpentry == "dc" %}
@@ -151,31 +149,6 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   you (e.g. sign-language interpreters, lactation facilities) please
   get in touch (using contact details below) and we will
   attempt to provide them.
-</p>
-
-{% comment %}
-  CONTACT EMAIL ADDRESS
-
-  Display the contact email address set in the configuration file.
-{% endcomment %}
-<p id="contact">
-  <strong>Contact</strong>:
-  Please email
-  {% if page.email %}
-    {% for email in page.email %}
-      {% if forloop.last and page.email.size > 1 %}
-        or
-      {% else %}
-        {% unless forloop.first %}
-        ,
-        {% endunless %}
-      {% endif %}
-      <a href='mailto:{{email}}'>{{email}}</a>
-    {% endfor %}
-  {% else %}
-    to-be-announced
-  {% endif %}
-  for more information.
 </p>
 
 <hr/>
